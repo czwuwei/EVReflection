@@ -112,7 +112,6 @@ class ViewController: UIViewController {
 
 // MARK: - Objects used in the tests
 
-
 class TestObject1: EVObject {
     var name: String? = "Object1 Name"
     var listObject2: [TestObject2]? = []

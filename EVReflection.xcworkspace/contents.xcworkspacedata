@@ -17,6 +17,12 @@
       location = "group:Podfile">
    </FileRef>
    <FileRef
+      location = "group:Demo/../.gitignore">
+   </FileRef>
+   <FileRef
+      location = "group:Demo/../.swift-version">
+   </FileRef>
+   <FileRef
       location = "group:Source">
    </FileRef>
    <FileRef

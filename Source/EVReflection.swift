@@ -42,7 +42,7 @@ final public class EVReflection {
         }
         return nil
     }
-    
+   
     
     /**
      Set object properties from a dictionary
@@ -398,7 +398,7 @@ final public class EVReflection {
      */
     public class func hashValue(_ theObject: NSObject) -> Int {
         let (hasKeys, _) = toDictionary(theObject, conversionOptions: .DefaultComparing)
-        return Int(hasKeys.map {$1}.reduce(0) {(31 &* $0) &+ ($1 as AnyObject).hash})
+        return hasKeys.map{ x in return x.1}.reduce(0) { (base, value) in return (31 &* base) &+ (value as AnyObject).hash}
     }
     
     
@@ -929,12 +929,12 @@ final public class EVReflection {
         }
         
         // Let us put a number into a string property by taking it's stringValue
-        let (_, type, _) = valueForAny("", key: key, anyValue: value, conversionOptions: conversionOptions, isCachable: false, parents: parents)
-        if (typeInObject == "String" || typeInObject == "NSString") && type == "NSNumber" {
+        let (_, valueType, _) = valueForAny("", key: key, anyValue: value, conversionOptions: conversionOptions, isCachable: false, parents: parents)
+        if (typeInObject == "String" || typeInObject == "NSString") && valueType == "NSNumber" {
             if let convertedValue = value as? NSNumber {
                 value = convertedValue.stringValue as AnyObject
             }
-        } else if typeInObject == "NSNumber" && (type == "String" || type == "NSString") {
+        } else if typeInObject == "NSNumber" && (valueType == "String" || valueType == "NSString") {
             if let convertedValue = (value as? String)?.lowercased() {
                 if convertedValue == "true" || convertedValue == "yes" {
                     value = 1 as AnyObject
@@ -944,11 +944,11 @@ final public class EVReflection {
                     value = NSNumber(value: Double(convertedValue) ?? 0 as Double)
                 }
             }
-        } else if typeInObject == "UUID"  && (type == "String" || type == "NSString") {
+        } else if typeInObject == "UUID"  && (valueType == "String" || valueType == "NSString") {
             value = UUID(uuidString: value as? String ?? "") as AnyObject? ?? UUID() as AnyObject
-        } else if typeInObject == "NSURL" && (type == "String" || type == "NSString") {
+        } else if typeInObject == "NSURL" && (valueType == "String" || valueType == "NSString") {
             value = NSURL(string: value as? String ?? "")! as AnyObject
-        } else if (typeInObject == "NSDate" || typeInObject == "Date")  && (type == "String" || type == "NSString") {
+        } else if (typeInObject == "NSDate" || typeInObject == "Date")  && (valueType == "String" || valueType == "NSString") {
             if let convertedValue = value as? String {
                 guard let date = getDateFormatter().date(from: convertedValue) else {
                     (anyObject as? EVReflectable)?.addStatusMessage(.InvalidValue, message: "The dateformatter returend nil for value \(convertedValue)")
@@ -979,8 +979,12 @@ final public class EVReflection {
                 try anyObject.validateValue(&setValue, forKey: key)
                 anyObject.setValue(setValue, forKey: key)
             } catch _ {
-                (anyObject as? EVReflectable)?.addStatusMessage(.InvalidValue, message: "Not a valid value for object `\(NSStringFromClass(type(of: (anyObject as AnyObject))))`, type `\(type)`, key  `\(key)`, value `\(value)`")
-                evPrint(.InvalidValue, "INFO: Not a valid value for object `\(NSStringFromClass(type(of: (anyObject as AnyObject))))`, type `\(type)`, key  `\(key)`, value `\(value)`")
+                
+                let t: AnyObject.Type = type(of: (anyObject as AnyObject))
+                let s: String = NSStringFromClass(t) as String
+                (anyObject as? EVReflectable)?.addStatusMessage(.InvalidValue, message: "Not a valid value for object `\(s)`, type `\(valueType)`, key  `\(key)`, value `\(value)`")
+                
+                evPrint(.InvalidValue, "INFO: Not a valid value for object `\(NSStringFromClass(type(of: (anyObject as AnyObject))))`, type `\(valueType)`, key  `\(key)`, value `\(value)`")
             }
             
             /*  TODO: Do I dare? ... For nullable types like Int? we could use this instead of the workaround.
