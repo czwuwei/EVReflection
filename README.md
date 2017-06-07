@@ -1,5 +1,9 @@
 # EVReflection
 
+
+🆘 WARINING 🆘 Swift 4 support is broken. See https://bugs.swift.org/browse/SR-5139
+
+
 <!---
 [![Circle CI](https://img.shields.io/circleci/project/evermeer/EVReflection.svg?style=flat)](https://circleci.com/gh/evermeer/EVReflection)
 [![Build Status](https://travis-ci.org/evermeer/EVReflection.svg?style=flat)](https://travis-ci.org/evermeer/EVReflection)
