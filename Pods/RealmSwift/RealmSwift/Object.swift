@@ -388,31 +388,31 @@ public final class DynamicObject: Object {
 /// Internal class. Do not use directly.
 @objc(RealmSwiftObjectUtil)
 public class ObjectUtil: NSObject {
-    @objc private class func swiftVersion() -> NSString {
+    private class func swiftVersion() -> NSString {
         return swiftLanguageVersion as NSString
     }
 
-    @objc private class func ignoredPropertiesForClass(_ type: AnyClass) -> NSArray? {
+    private class func ignoredPropertiesForClass(_ type: AnyClass) -> NSArray? {
         if let type = type as? Object.Type {
             return type.ignoredProperties() as NSArray?
         }
         return nil
     }
 
-    @objc private class func indexedPropertiesForClass(_ type: AnyClass) -> NSArray? {
+    private class func indexedPropertiesForClass(_ type: AnyClass) -> NSArray? {
         if let type = type as? Object.Type {
             return type.indexedProperties() as NSArray?
         }
         return nil
     }
 
-    @objc private class func linkingObjectsPropertiesForClass(_ type: AnyClass) -> NSDictionary? {
+    private class func linkingObjectsPropertiesForClass(_ type: AnyClass) -> NSDictionary? {
         // Not used for Swift. getLinkingObjectsProperties(_:) is used instead.
         return nil
     }
 
     // Get the names of all properties in the object which are of type List<>.
-    @objc private class func getGenericListPropertyNames(_ object: Any) -> NSArray {
+    private class func getGenericListPropertyNames(_ object: Any) -> NSArray {
         return Mirror(reflecting: object).children.filter { (prop: Mirror.Child) in
             return type(of: prop.value) is RLMListBase.Type
         }.flatMap { (prop: Mirror.Child) in
@@ -421,7 +421,7 @@ public class ObjectUtil: NSObject {
     }
 
     // swiftlint:disable:next cyclomatic_complexity
-    @objc private class func getOptionalProperties(_ object: Any) -> [String: Any] {
+    private class func getOptionalProperties(_ object: Any) -> [String: Any] {
         let children = Mirror(reflecting: object).children
         return children.reduce([:]) { (properties: [String: Any], prop: Mirror.Child) in
             guard let name = prop.label else { return properties }
@@ -457,12 +457,12 @@ public class ObjectUtil: NSObject {
         }
     }
 
-    @objc private class func requiredPropertiesForClass(_: Any) -> [String] {
+    private class func requiredPropertiesForClass(_: Any) -> [String] {
         return []
     }
 
     // Get information about each of the linking objects properties.
-    @objc private class func getLinkingObjectsProperties(_ object: Any) -> [String: [String: String]] {
+    private class func getLinkingObjectsProperties(_ object: Any) -> [String: [String: String]] {
         let properties = Mirror(reflecting: object).children.filter { (prop: Mirror.Child) in
             return prop.value as? LinkingObjectsBase != nil
         }.flatMap { (prop: Mirror.Child) in

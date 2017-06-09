@@ -1,5 +1,14 @@
 # EVReflection
 
+🆘 WARNING 🆘 When using Swift 4 and you extend your objects using EVReflecable instead of having EVObject as it's base class then you have to add the
+@objcMembers attribute to your class definition like this:
+
+```swift
+@objcMembers open class MyClass: EVReflectable {
+    // your class definition here.
+}
+```swift
+
 <!---
 [![Circle CI](https://img.shields.io/circleci/project/evermeer/EVReflection.svg?style=flat)](https://circleci.com/gh/evermeer/EVReflection)
 [![Build Status](https://travis-ci.org/evermeer/EVReflection.svg?style=flat)](https://travis-ci.org/evermeer/EVReflection)
