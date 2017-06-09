@@ -7,7 +7,8 @@
 @objcMembers open class MyClass: EVReflectable {
     // your class definition here.
 }
-```swift
+```
+
 
 <!---
 [![Circle CI](https://img.shields.io/circleci/project/evermeer/EVReflection.svg?style=flat)](https://circleci.com/gh/evermeer/EVReflection)
