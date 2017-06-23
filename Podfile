@@ -42,5 +42,8 @@ target 'Demo' do
     alllibraries
 end
 
-
-
+target 'EVReflection_iOS_Realm' do
+    project 'Carthage/Carthage'
+    platform :ios, '8.0'
+    pod 'EVReflection/Realm', :path => "./"
+end

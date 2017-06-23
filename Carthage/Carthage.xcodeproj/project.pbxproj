@@ -21,6 +21,7 @@
 		13B051311EEE613D002629F9 /* PrintOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B051251EEE6123002629F9 /* PrintOptions.swift */; };
 		2DC8AA401C24215500FA6B8E /* EVReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC8AA3F1C24215500FA6B8E /* EVReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DC8AA661C242E0600FA6B8E /* EVReflectionOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC8AA651C242E0600FA6B8E /* EVReflectionOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409AFE2D202D4157E73EC35B /* Pods_EVReflection_iOS_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A0CF5CE0AE9BF7F00C865 /* Pods_EVReflection_iOS_Realm.framework */; };
 		7F75C54B1E463786003B08C5 /* EVDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75C54A1E463786003B08C5 /* EVDictionaryExtension.swift */; };
 		7F75C54C1E4637A0003B08C5 /* EVDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75C54A1E463786003B08C5 /* EVDictionaryExtension.swift */; };
 		7F75C54D1E4637A1003B08C5 /* EVDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75C54A1E463786003B08C5 /* EVDictionaryExtension.swift */; };
@@ -46,6 +47,16 @@
 		7FF9B83B1E237F910089A3A1 /* EVWorkaroundHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9B8291E237F910089A3A1 /* EVWorkaroundHelpers.swift */; };
 		7FF9B83C1E237F910089A3A1 /* EVWorkaroundHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9B8291E237F910089A3A1 /* EVWorkaroundHelpers.swift */; };
 		7FF9B83D1E237F910089A3A1 /* EVWorkaroundHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9B8291E237F910089A3A1 /* EVWorkaroundHelpers.swift */; };
+		B81F76C91EFD351700985C30 /* EVWorkaroundHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9B8291E237F910089A3A1 /* EVWorkaroundHelpers.swift */; };
+		B81F76CA1EFD351700985C30 /* EVDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75C54A1E463786003B08C5 /* EVDictionaryExtension.swift */; };
+		B81F76CB1EFD351700985C30 /* EVArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9B8251E237F910089A3A1 /* EVArrayExtension.swift */; };
+		B81F76CC1EFD351700985C30 /* PrintOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B051251EEE6123002629F9 /* PrintOptions.swift */; };
+		B81F76CD1EFD351700985C30 /* ConversionOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B051231EEE6123002629F9 /* ConversionOptions.swift */; };
+		B81F76CE1EFD351700985C30 /* EVObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9B8261E237F910089A3A1 /* EVObject.swift */; };
+		B81F76CF1EFD351700985C30 /* DeserializationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B051241EEE6123002629F9 /* DeserializationStatus.swift */; };
+		B81F76D01EFD351700985C30 /* EVReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9B8271E237F910089A3A1 /* EVReflectable.swift */; };
+		B81F76D11EFD351700985C30 /* EVReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9B8281E237F910089A3A1 /* EVReflection.swift */; };
+		B81F76D41EFD351700985C30 /* EVReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC8AA3F1C24215500FA6B8E /* EVReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D097DC901DD663990020CA9A /* EVReflectionTVOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F9336B01C28227400AF7076 /* EVReflectionTVOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -72,6 +83,11 @@
 		7FF9B8271E237F910089A3A1 /* EVReflectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EVReflectable.swift; path = ../Source/EVReflectable.swift; sourceTree = "<group>"; };
 		7FF9B8281E237F910089A3A1 /* EVReflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EVReflection.swift; path = ../Source/EVReflection.swift; sourceTree = "<group>"; };
 		7FF9B8291E237F910089A3A1 /* EVWorkaroundHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EVWorkaroundHelpers.swift; path = ../Source/EVWorkaroundHelpers.swift; sourceTree = "<group>"; };
+		AEF2CCF0BDBB86E82E59657E /* Pods-EVReflection_iOS_Realm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVReflection_iOS_Realm.release.xcconfig"; path = "../Pods/Target Support Files/Pods-EVReflection_iOS_Realm/Pods-EVReflection_iOS_Realm.release.xcconfig"; sourceTree = "<group>"; };
+		B81F76D91EFD351800985C30 /* EVReflection_iOS_Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EVReflection_iOS_Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B81F76DA1EFD351800985C30 /* EVReflection_iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "EVReflection_iOS copy-Info.plist"; path = "/Users/z00066/git/github/EVReflection/Carthage/EVReflection_iOS copy-Info.plist"; sourceTree = "<absolute>"; };
+		D8F38CAD1822AF057D542A58 /* Pods-EVReflection_iOS_Realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVReflection_iOS_Realm.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-EVReflection_iOS_Realm/Pods-EVReflection_iOS_Realm.debug.xcconfig"; sourceTree = "<group>"; };
+		E13A0CF5CE0AE9BF7F00C865 /* Pods_EVReflection_iOS_Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EVReflection_iOS_Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +119,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B81F76D21EFD351700985C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409AFE2D202D4157E73EC35B /* Pods_EVReflection_iOS_Realm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05AD4DB4C6EFE3DD10D6DA02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E13A0CF5CE0AE9BF7F00C865 /* Pods_EVReflection_iOS_Realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2DC8AA3E1C24215500FA6B8E /* EVReflectionIOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +169,10 @@
 				7F1C9D2A1E23C6C100A18776 /* EVReflection.framework */,
 				7F1C9D2B1E23C6C100A18776 /* EVReflection.framework */,
 				7F1C9D2C1E23C6C100A18776 /* EVReflection.framework */,
+				B81F76D91EFD351800985C30 /* EVReflection_iOS_Realm.framework */,
+				B81F76DA1EFD351800985C30 /* EVReflection_iOS copy-Info.plist */,
+				E4D0E2F720D5DBEFF8DF4CF8 /* Pods */,
+				05AD4DB4C6EFE3DD10D6DA02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +210,15 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		E4D0E2F720D5DBEFF8DF4CF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8F38CAD1822AF057D542A58 /* Pods-EVReflection_iOS_Realm.debug.xcconfig */,
+				AEF2CCF0BDBB86E82E59657E /* Pods-EVReflection_iOS_Realm.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -206,6 +251,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD67D8E1C288B560071234B /* EVReflectionWatchOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B81F76D31EFD351700985C30 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B81F76D41EFD351700985C30 /* EVReflection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +337,26 @@
 			productReference = 7F1C9D2C1E23C6C100A18776 /* EVReflection.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B81F76C71EFD351700985C30 /* EVReflection_iOS_Realm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B81F76D61EFD351700985C30 /* Build configuration list for PBXNativeTarget "EVReflection_iOS_Realm" */;
+			buildPhases = (
+				F0E87CDE6EEC1D737770FD99 /* [CP] Check Pods Manifest.lock */,
+				B81F76C81EFD351700985C30 /* Sources */,
+				B81F76D21EFD351700985C30 /* Frameworks */,
+				B81F76D31EFD351700985C30 /* Headers */,
+				B81F76D51EFD351700985C30 /* Resources */,
+				6F37AAF7361F9F97CBFE8CBC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EVReflection_iOS_Realm;
+			productName = EVReflection;
+			productReference = B81F76D91EFD351800985C30 /* EVReflection_iOS_Realm.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -327,6 +400,7 @@
 				2DC8AA621C242E0600FA6B8E /* EVReflection_OSX */,
 				7F9336AD1C28227400AF7076 /* EVReflection_TVOS */,
 				7FD67D8A1C288B560071234B /* EVReflection_WatchOS */,
+				B81F76C71EFD351700985C30 /* EVReflection_iOS_Realm */,
 			);
 		};
 /* End PBXProject section */
@@ -360,7 +434,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B81F76D51EFD351700985C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F37AAF7361F9F97CBFE8CBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-EVReflection_iOS_Realm/Pods-EVReflection_iOS_Realm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0E87CDE6EEC1D737770FD99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DC8AA381C24215500FA6B8E /* Sources */ = {
@@ -424,6 +538,22 @@
 				7FF9B8311E237F910089A3A1 /* EVObject.swift in Sources */,
 				7FF9B8351E237F910089A3A1 /* EVReflectable.swift in Sources */,
 				7FF9B8391E237F910089A3A1 /* EVReflection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B81F76C81EFD351700985C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B81F76C91EFD351700985C30 /* EVWorkaroundHelpers.swift in Sources */,
+				B81F76CA1EFD351700985C30 /* EVDictionaryExtension.swift in Sources */,
+				B81F76CB1EFD351700985C30 /* EVArrayExtension.swift in Sources */,
+				B81F76CC1EFD351700985C30 /* PrintOptions.swift in Sources */,
+				B81F76CD1EFD351700985C30 /* ConversionOptions.swift in Sources */,
+				B81F76CE1EFD351700985C30 /* EVObject.swift in Sources */,
+				B81F76CF1EFD351700985C30 /* DeserializationStatus.swift in Sources */,
+				B81F76D01EFD351700985C30 /* EVReflectable.swift in Sources */,
+				B81F76D11EFD351700985C30 /* EVReflection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +849,53 @@
 			};
 			name = Release;
 		};
+		B81F76D71EFD351700985C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8F38CAD1822AF057D542A58 /* Pods-EVReflection_iOS_Realm.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "EVReflection_iOS copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULE_NAME = EVReflection;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.evict.EVReflectioniOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B81F76D81EFD351800985C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEF2CCF0BDBB86E82E59657E /* Pods-EVReflection_iOS_Realm.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "EVReflection_iOS copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULE_NAME = EVReflection;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.evict.EVReflectioniOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -763,6 +940,15 @@
 			buildConfigurations = (
 				7FD67D911C288B560071234B /* Debug */,
 				7FD67D921C288B560071234B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B81F76D61EFD351700985C30 /* Build configuration list for PBXNativeTarget "EVReflection_iOS_Realm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B81F76D71EFD351700985C30 /* Debug */,
+				B81F76D81EFD351800985C30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
